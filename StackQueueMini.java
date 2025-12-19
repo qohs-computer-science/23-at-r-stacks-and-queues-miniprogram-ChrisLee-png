@@ -19,9 +19,9 @@ class StackQueueMini {
       s.add(in.nextInt());
     }//end loop to fill stack
 
-    System.out.println("original stack contains : " + s);
+    System.out.println("original stack contains : bottom " + s + " top");
     jas(s);
-    System.out.println("stack now contains after method: " +s);
+    System.out.println("stack now contains after method: bottom " +s+ " top");
 
     for(int i=0;i<10;i++)
     {
@@ -30,9 +30,9 @@ class StackQueueMini {
     }//end loop to fill queue 
     in.close();
 
-    System.out.println("original queue contains : " + q);
+    System.out.println("original queue contains : front " + q+" back");
     lia(q);
-    System.out.println("queue now contains after method: " +q);
+    System.out.println("queue now contains after method: front " +q+" back");
   } // end main
 
   public static void jas(Stack<Integer> e)
@@ -43,8 +43,8 @@ class StackQueueMini {
     while(!leo.isEmpty())
     {
       Integer med = leo.pop();
-      e.add(med);
-      e.add(med); 
+      e.push(med);
+      e.push(med); 
     }//end loop through list
   }//end method
 
